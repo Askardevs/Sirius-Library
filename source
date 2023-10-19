@@ -1760,8 +1760,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	return TabFunction
 end   
 
-function OrionLib:Hide(Value)
-	_G.buttonhide = Value
+function OrionLib:Hide()
+	_G.buttonhide = OrionLib.Flags["ChangeHub"].Value
 	MainWindow.Visible = not MainWindow.Visible
 end
 
