@@ -660,7 +660,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	end)
 
 	AddConnection(UserInputService.InputBegan, function(Input)
-		if Input.KeyCode == Enum.KeyCode._G.buttonhide and UIHidden then
+		if Input.KeyCode == Enum.KeyCode.RightShift and UIHidden then
 			MainWindow.Visible = true
 		end
 	end)
@@ -1762,6 +1762,7 @@ end
 
 function OrionLib:Hide(Value)
 	_G.buttonhide = Value
+	MainWindow.Visible = not MainWindow.Visible
 end
 
 function OrionLib:Destroy()
